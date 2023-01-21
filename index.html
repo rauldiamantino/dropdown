@@ -1,141 +1,265 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./dist/tailwind.css">
-  <title>Menu</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/tailwindcss/dist/tailwind.css">
+    <title>Menu</title>
 </head>
+
 <body class="">
-  <ul class="flex justify-center gap-6">
-    <div class="dropdown-menu">
-        <div class="relative item-menu">
-            <button>Ordenar</button>
-            <ul class="dropdown-itens scale-100">
-                <li class="subitem-menu">
-                    <input type="radio" name="aleat" id="aleat">
-                    <label for="aleat">aleat</label>
-                </li>
-            
-                <li class="subitem-menu">
-                    <input type="radio" name="barato" id="barato">
-                    <label for="barato">barato</label>
-                </li>
-                <li class="subitem-menu">
-                    <input type="radio" name="caro" id="caro">
-                    <label for="caro">caro</label>
-                </li>
-                <li class="subitem-menu">
-                    <input type="radio" name="desconto" id="desconto">
-                    <label for="desconto">desconto</label>
-                </li>
-                <li class="subitem-menu">
-                    <input type="radio" name="estoque" id="estoque">
-                    <label for="estoque">estoque</label>
-                </li>
-                <li class="subitem-menu">
-                    <input type="radio" name="nome" id="nome">
-                    <label for="nome">nome</label>
-                </li>
-                <li class="subitem-menu">
-                    <input type="radio" name="novo" id="novo">
-                    <label for="novo">novo</label>
-                </li>
-                <li class="subitem-menu">
-                    <input type="radio" name="pop" id="pop">
-                    <label for="pop">pop</label>
-                </li>
-                <li class="subitem-menu">
-                    <input type="radio" name="relev" id="relev">
-                    <label for="relev">relev</label>
-                </li>
-                <li class="subitem-menu">
-                    <input type="radio" name="vendas" id="vendas">
-                    <label for="vendas">vendas</label>
-                </li>
+    <header class="absolute top-0 z-50 w-full shadow-md">
+        <section class="topo h-20 bg-white">
+
+        </section>
+        <nav class="px-12 py-2 w-full flex items-center justify-end shadow-md bg-white border-t border-gray-100">
+            <ul class="flex justify-center gap-6">
+                <div>
+                    <div class="relative item-menu">
+                        <button class="group flex items-center px-4">
+                            <svg class="svg-chevron-down text-blackTransparent group-hover:text-black transition duration-300 absolute left-0 transform scale-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                              </svg>
+                              <svg class="svg-chevron-down text-black transition duration-300 absolute left-0 transform scale-0" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                              </svg>
+                            Ordenar
+                            </button>
+                        <ul class="dropdown-itens-close">
+                            <div class="absolute -top-1.5 right-3 transform rotate-45 bg-white w-10 h-10"></div>
+                            <div class="divide-y max-h-435 overflow-y-auto sticky">
+                                <label class="subitem-menu" for="aleat">
+                                    <li class="flex items-center gap-3">
+                                        <input type="radio" name="aleat" id="aleat" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none hover:text-blackTransparent focus:text-blackTransparent focus:ring-blackTransparent">
+                                        aleat
+                                    </li>
+                                </label>
+                                <label class="subitem-menu" for="barato">
+                                    <li class="flex items-center gap-3">
+                                        <input type="radio" name="aleat" id="barato" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none hover:text-blackTransparent focus:text-blackTransparent focus:ring-blackTransparent">
+                                        barato
+                                    </li>
+                                </label>
+                                <label class="subitem-menu" for="caro">
+                                    <li class="flex items-center gap-3">
+                                        <input type="radio" name="aleat" id="caro" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none hover:text-blackTransparent focus:text-blackTransparent focus:ring-blackTransparent">
+                                        caro
+                                    </li>
+                                </label>
+                                <label class="subitem-menu" for="desconto">
+                                    <li class="flex items-center gap-3">
+                                        <input type="radio" name="aleat" id="desconto" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none hover:text-blackTransparent focus:text-blackTransparent focus:ring-blackTransparent">
+                                        desconto
+                                    </li>
+                                </label>
+                                <label class="subitem-menu" for="estoque">
+                                    <li class="flex items-center gap-3">
+                                        <input type="radio" name="aleat" id="estoque" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none hover:text-blackTransparent focus:text-blackTransparent focus:ring-blackTransparent">
+                                        estoque
+                                    </li>
+                                </label>
+                                <label class="subitem-menu" for="nome">
+                                    <li class="flex items-center gap-3">
+                                        <input type="radio" name="aleat" id="nome" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none hover:text-blackTransparent focus:text-blackTransparent focus:ring-blackTransparent">
+                                        nome
+                                    </li>
+                                </label>
+                                <label class="subitem-menu" for="novo">
+                                    <li class="flex items-center gap-3">
+                                        <input type="radio" name="aleat" id="novo" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none hover:text-blackTransparent focus:text-blackTransparent focus:ring-blackTransparent">
+                                        novo
+                                    </li>
+                                </label>
+                                <label class="subitem-menu" for="pop">
+                                    <li class="flex items-center gap-3">
+                                        <input type="radio" name="aleat" id="pop" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none hover:text-blackTransparent focus:text-blackTransparent focus:ring-blackTransparent">
+                                        pop
+                                    </li>
+                                </label>
+                                <label class="subitem-menu" for="relev">
+                                    <li class="flex items-center gap-3">
+                                        <input type="radio" name="aleat" id="relev" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none hover:text-blackTransparent focus:text-blackTransparent focus:ring-blackTransparent">
+                                        relev
+                                    </li>
+                                </label>
+                                <label class="subitem-menu" for="vendas">
+                                    <li class="flex items-center gap-3">
+                                        <input type="radio" name="aleat" id="vendas" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none hover:text-blackTransparent focus:text-blackTransparent focus:ring-blackTransparent">
+                                        vendas
+                                    </li>
+                                </label>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative item-menu">
+                        <button class="group flex items-center px-4">
+                            <svg class="svg-chevron-down text-blackTransparent group-hover:text-black transition duration-300 absolute left-0 transform scale-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                              </svg>
+                              <svg class="svg-chevron-down text-black transition duration-300 absolute left-0 transform scale-0" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                              </svg>
+                            Preços
+                            </button>
+                        <ul class="dropdown-itens-close">
+                            <div class="absolute -top-1.5 right-3 transform rotate-45 bg-white w-10 h-10"></div>
+                            <div class="divide-y max-h-435 overflow-y-auto sticky">
+                                <label class="subitem-menu" for="preco-de">
+                                    <li class="flex items-center gap-3">
+                                        De:
+                                        <input type="text" placeholder="0.00" id="preco-de" class="w-20 cursor-pointer border-black hover:border-blackTransparent rounded focus:text-blackTransparent focus:border-black focus:ring-black">
+                                    </li>
+                                </label>
+                                <label class="subitem-menu" for="preco-por">
+                                    <li>
+                                        Por:
+                                        <input type="text" placeholder="0.00" id="preco-por" class="w-20 cursor-pointer border-black hover:border-blackTransparent rounded focus:text-blackTransparent focus:border-black focus:ring-black">
+                                    </li>
+                                </label>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative item-menu">
+                        <button class="group flex items-center px-4">
+                            <svg class="svg-chevron-down text-blackTransparent group-hover:text-black transition duration-300 absolute left-0 transform scale-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                              </svg>
+                              <svg class="svg-chevron-down text-black transition duration-300 absolute left-0 transform scale-0" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                              </svg>
+                            Categorias
+                            </button>
+                        <ul class="dropdown-itens-close">
+                            <div class="absolute -top-1.5 right-3 transform rotate-45 bg-white w-10 h-10"></div>
+                            <div class="divide-y max-h-435 overflow-y-auto sticky">
+                                <label class="subitem-menu" for="sale">
+                                    <li class="flex items-center gap-3">
+                                        <input type="checkbox" name="categorias" id="sale" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none rounded hover:text-blackTransparent focus:text-blackTransparent focus:ring-0 focus:ring-offset-0">
+                                        SALE
+                                    </li>
+                                </label>
+                                <label class="subitem-menu" for="new-colection">
+                                    <li class="flex items-center gap-3">
+                                        <input type="checkbox" name="categorias" id="new-colection" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none rounded hover:text-blackTransparent focus:text-blackTransparent focus:ring-0 focus:ring-offset-0">
+                                        New Colection
+                                    </li>
+                                </label>
+                                <label class="subitem-menu" for="shorts">
+                                    <li class="flex items-center gap-3">
+                                        <input type="checkbox" name="categorias" id="shorts" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none rounded hover:text-blackTransparent focus:text-blackTransparent focus:ring-0 focus:ring-offset-0">
+                                        Shorts
+                                    </li>
+                                </label>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative item-menu">
+                        <button class="group flex items-center px-4">
+                            <svg class="svg-chevron-down text-blackTransparent group-hover:text-black transition duration-300 absolute left-0 transform scale-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                              </svg>
+                              <svg class="svg-chevron-down text-black transition duration-300 absolute left-0 transform scale-0" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                              </svg>
+                            Especificações
+                            </button>
+                        <ul class="dropdown-itens-close">
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative item-menu">
+                        <button class="group flex items-center px-4">
+                            <svg class="svg-chevron-down text-blackTransparent group-hover:text-black transition duration-300 absolute left-0 transform scale-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                              </svg>
+                              <svg class="svg-chevron-down text-black transition duration-300 absolute left-0 transform scale-0" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                              </svg>
+                            Destaques
+                            </button>
+                        <ul class="dropdown-itens-close">
+                            <div class="absolute -top-1.5 right-3 transform rotate-45 bg-white w-10 h-10"></div>
+                            <div class="divide-y max-h-435 overflow-y-auto sticky">
+                                <label class="subitem-menu" for="new">
+                                    <li class="flex items-center gap-3">
+                                        <input type="checkbox" name="destaques" id="new" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none rounded hover:text-blackTransparent focus:text-blackTransparent focus:ring-0 focus:ring-offset-0">
+                                        New
+                                    </li>
+                                </label>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative item-menu">
+                        <button class="group flex items-center px-4">
+                            <svg class="svg-chevron-down text-blackTransparent group-hover:text-black transition duration-300 absolute left-0 transform scale-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                              </svg>
+                              <svg class="svg-chevron-down text-black transition duration-300 absolute left-0 transform scale-0" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                              </svg>
+                            Marcas
+                            </button>
+                        <ul class="dropdown-itens-close">
+                            <div class="absolute -top-1.5 right-3 transform rotate-45 bg-white w-10 h-10"></div>
+                            <div class="divide-y max-h-435 overflow-y-auto sticky">
+                                <label class="subitem-menu" for="alekta">
+                                    <li class="flex items-center gap-3">
+                                        <input type="checkbox" name="marcas" id="alekta" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none rounded hover:text-blackTransparent focus:text-blackTransparent focus:ring-0 focus:ring-offset-0">
+                                        Alekta
+                                    </li>
+                                </label>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative item-menu">
+                        <button class="group flex items-center px-4">
+                            <svg class="svg-chevron-down text-blackTransparent group-hover:text-black transition duration-300 absolute left-0 transform scale-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                              </svg>
+                              <svg class="svg-chevron-down text-black transition duration-300 absolute left-0 transform scale-0" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                              </svg>
+                            Variações
+                            </button>
+                        <ul class="dropdown-itens-close">
+                            <div class="absolute -top-1.5 right-3 transform rotate-45 bg-white w-10 h-10"></div>
+                            <div class="divide-y max-h-435 overflow-y-auto sticky">
+                                <label class="subitem-menu" for="cor-preto-e-cobre">
+                                    <li class="flex items-center gap-3">
+                                        <input type="checkbox" name="variacoes" id="cor-preto-e-cobre" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none rounded hover:text-blackTransparent focus:text-blackTransparent focus:ring-0 focus:ring-offset-0">
+                                        Cor > Preto e Cobre
+                                    </li>
+                                </label>
+                                <label class="subitem-menu" for="cor-marinho-e-rose-mescla">
+                                    <li class="flex items-center gap-3">
+                                        <input type="checkbox" name="variacoes" id="cor-marinho-e-rose-mescla" class="cursor-pointer w-5 h-5 border-black hover:border-blackTransparent hover:checked:bg-black text-black ring-none rounded hover:text-blackTransparent focus:text-blackTransparent focus:ring-0 focus:ring-offset-0">
+                                        Cor > Marinho e Rosê Mescla
+                                    </li>
+                                </label>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
             </ul>
-        </div>
-    </div>
-    <div>
-        <div class="relative item-menu">
-            <button>Preços</button>
-            <ul class="dropdown-itens scale-100">
-                <li class="subitem-menu">
-                    <label for="preco-de">De:</label>
-                    <input type="text" placeholder="0.00" id="preco-de">
-                </li>
-                <li class="subitem-menu">
-                    <label for="preco-por">Por:</label>
-                    <input type="text" placeholder="0.00" id="preco-por">
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div>
-        <div class="relative item-menu">
-            <button>Categorias</button>
-            <ul class="dropdown-itens scale-100">
-                <li class="subitem-menu">
-                    <input type="checkbox" name="categorias" id="sale">
-                    <label for="sale">SALE</label>
-                </li>
-                <li class="subitem-menu">
-                    <input type="checkbox" name="categorias" id="new-colection">
-                    <label for="new-colection">New Colection</label>
-                </li>
-                <li class="subitem-menu">
-                    <input type="checkbox" name="categorias" id="shorts">
-                    <label for="shorts">Shorts</label>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div>
-        <div class="relative item-menu">
-              <button>Especificações</button>
-              <ul class="dropdown-itens scale-100">
-              
-              </ul>
-          </div>
-    </div>    
-    <div>
-        <div class="relative item-menu">
-            <button>Destaques</button>
-            <ul class="dropdown-itens scale-100">
-                <li class="subitem-menu">
-                    <input type="checkbox" name="destaques" id="new">
-                    <label for="new">New</label>
-                </li>
-            </ul>
-        </div>
-    </div>    
-    <div>
-        <div class="relative item-menu">
-            <button>Marcas</button>
-            <ul class="dropdown-itens scale-100">
-                <li class="subitem-menu">
-                    <input type="checkbox" name="marcas" id="alekta">
-                    <label for="alekta">Alekta</label>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div>
-        <div class="relative item-menu">
-            <button>Variações</button>
-            <ul class="dropdown-itens scale-100">
-                <li class="subitem-menu">
-                    <input type="checkbox" name="variacoes" id="cor-preto-e-cobre">
-                    <label for="cor-preto-e-cobre">Cor > Preto e Cobre</label>
-                </li>
-                <li class="subitem-menu">
-                    <input type="checkbox" name="variacoes" id="cor-marinho-e-rose-mescla">
-                    <label for="cor-marinho-e-rose-mescla">Cor > Marinho e Rosê Mescla</label>
-                </li>
-            </ul>
-        </div>
-    </div>
-  </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="block-page bg-blackTransparent w-full h-full absolute top-0 z-20">
+        </section>
+    </main>
 </body>
+
 </html>

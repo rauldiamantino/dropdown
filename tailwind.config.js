@@ -2,12 +2,24 @@
 module.exports = {
   content: ["./*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "blackTransparent": "rgba(0, 0, 0, 0.5)",
+      },
+      maxHeight: {
+        '435': '435px',
+       }
+    }
   },
-  plugins: [],
+  plugins: [
+    require("tailwind-accent-color")(),
+    require("@tailwindcss/forms")
+  ],
   variants: {
     extend: {
-      borderColor: ['focus-within']
+      backgroundColor: ['checked'],
+      borderColor: ['focus-within', 'checked'],
+      ringColor: ['focus'],
     }
   }
 }
