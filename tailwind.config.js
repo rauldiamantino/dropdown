@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "blackTransparent": "rgba(0, 0, 0, 0.5)",
+        "blackTransparent": "rgba(0, 0, 0, 0.080)",
       },
       maxHeight: {
         '435': '435px',
