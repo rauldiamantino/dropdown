@@ -21,7 +21,7 @@ const abrirSubItensMenu = ($subItemMenu) => {
   if(diferenteDoItemAtual) fecharTodosSubItensMenu()    
   
   $subItemMenu.classList.toggle('dropdown-itens-open')
-  bloquearFundoAoClicar()
+  bloqueiaDesbloqueiaFundo()
   
 }
 
@@ -34,7 +34,7 @@ const fecharTodosSubItensMenu = () => {
   })
 }
 
-const bloquearFundoAoClicar = () => {
+const bloqueiaDesbloqueiaFundo = () => {
   const $fundo = document.querySelector('.bloquear-fundo')
   $fundo.classList.toggle('hidden')
 }
