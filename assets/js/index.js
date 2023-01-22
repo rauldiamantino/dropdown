@@ -18,34 +18,40 @@ const clicarSubItemMenu = ($button) => $button.addEventListener('click', () => {
 const abrirSubItensMenu = ($subItemMenu) => {
   const diferenteDoItemAtual = !$subItemMenu.classList.contains('dropdown-itens-open')  
   
-  if(diferenteDoItemAtual) fecharTodosSubItensMenu()    
-  
-  $subItemMenu.classList.toggle('dropdown-itens-open')
-  bloqueiaDesbloqueiaFundo()
-  
+  if(diferenteDoItemAtual) fecharTodosSubItensMenu()        
+
+    $subItemMenu.classList.toggle('dropdown-itens-open')
+    bloqueiaDesbloqueiaFundo()     
 }
 
 const fecharTodosSubItensMenu = () => {
   const $subItensMenu = document.querySelectorAll('.dropdown-itens-close')
 
   $subItensMenu.forEach($subItemMenu => {
-    $subItemMenu.classList.remove('dropdown-itens-open')
+    removeClasseDropdownItensOpen($subItemMenu)
     desbloquearFundoAoClicar()
   })
 }
 
+const removeClasseDropdownItensOpen = ($subItemMenu) => $subItemMenu.classList.remove('dropdown-itens-open')
+
 const bloqueiaDesbloqueiaFundo = () => {
-  const $fundo = document.querySelector('.bloquear-fundo')
+  removeDocumentScroll()
+  const $fundo = document.querySelector('.bloquear-fundo')  
   $fundo.classList.toggle('hidden')
 }
 
+const removeDocumentScroll = () => (document.documentElement.style.overflow = "hidden");
+const addDocumentScroll = () => (document.documentElement.style.overflow = "auto");
+
 const desbloquearFundoAoClicar = () => {
+  addDocumentScroll()
   const $fundo = document.querySelector('.bloquear-fundo')
   $fundo.classList.add('hidden')
 }
 
+// remove o bloqueio de fundo se clicar fora do menu
 document.addEventListener('click', (e) => {
-
   if(e.target.localName != 'button') {
     desbloquearFundoAoClicar()
     fecharTodosSubItensMenu()
