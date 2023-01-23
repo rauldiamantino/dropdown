@@ -9,11 +9,11 @@
   <title>Menu</title>
 </head>
 
-<body>
+<body class="bg-neutral-300">
   <header class="h-10">
   </header>
-  <nav class="relative flex items-center justify-center h-10 bg-blue-100">
-    <details class="marcas hidden">
+  <nav class="relative flex items-center justify-center gap-5 h-12 px-4 bg-blue-100">
+    <details class="marcas hidden lg:flex">
       <summary>Nossas marcas</summary>
       <div>
         <label for="levis">
@@ -31,7 +31,7 @@
       </div>
     </details>
 
-    <details class="preco hidden">
+    <details class="preco hidden lg:flex">
       <summary>Preço</summary>
       <div>
         <label for="preco-0-20">
@@ -61,7 +61,7 @@
       </div>
     </details>
 
-    <details class="tamanhos hidden">
+    <details class="tamanhos hidden lg:flex" id="tamanhos-details">
       <summary>Tamanhos</summary>
       <div>
         <label for="tamanho-u">
@@ -91,13 +91,14 @@
       </div>
     </details>
 
-    <details open class="ordenar relative">
+    <details open class="ordenar peer relative">
       <summary class="cursor-pointer">Ordenar</summary>
-      <div class="itens-menu fixed left-0 bottom-0 right-0">
-        <h2 class="font-bold p-4 bg-red-400 rounded-t-2xl relative">
-          Ordenar          
+      <div class="itens-menu fixed left-0 bottom-0 right-0 lg:absolute lg:top-10 lg:left-auto lg:right-0 rounded-t-2xl lg:rounded-none">
+        <h2 class="font-bold p-5 relative lg:hidden">
+          Ordenar
+          <img class="btn-fechar-details w-8 h-8 absolute right-2 top-[50%] translate-y-[-50%] cursor-pointer" src="assets/images/close.svg">
         </h2>
-        <div class="flex flex-col h-40 overflow-y-scroll">
+        <div class="flex flex-col h-40 lg:h-96 lg:w-max overflow-y-scroll bg-white">
           <input type="radio" name="ordenar" id="relevancia" class="relevancia peer hidden">
           <label for="relevancia" class="cursor-pointer w-full px-5 py-2 peer-checked:font-bold peer-hover:bg-neutral-100">Relevância</label>
 
@@ -139,6 +140,8 @@
   </nav>
   <main>
   </main>
+
+  <script src="assets/js/index.js"></script>
 </body>
 
 </html>
