@@ -22,22 +22,9 @@ const fecharDemaisDetails = ($detailClicada) => {
   })
 }
 
-// fecha detail ao clicar em qualquer lugar da tela - exceto responsivo
-const fecharDetailClicouFora = (e) => {
-  const alvo = e.srcElement.nodeName == "SUMMARY"   
-
-  $todosDetails.forEach($detail => {
-    if ($detail !== alvo) {
-      $detail.removeAttribute('open')
-    }
-  })
-
-}
-
-
 
 // Chamando as funções
 $btnFechar.addEventListener('click', () => fecharTagDetailsOrdenar())
 $todosDetails.forEach(fecharDemaisDetails)
-document.addEventListener('click', (e) => { fecharDetailClicouFora(e) })
+
 
