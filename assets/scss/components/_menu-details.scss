@@ -1,14 +1,13 @@
-@keyframes efeito-abrir-menu {
-  0%{top: 40px;
-  }
-  50%{
-    top: 45px;
-  }
-  100%{
-    top: 50px;
+@keyframes efeito-abrir-menu{
+  0%  {top:40px;}
+  50% {top:45px;}
+  100%{top:50px;
   }
 }
 
-.details-menu[open] .details-itens-menu{animation: efeito-abrir-menu 300ms ease-in-out forwards;}
+@media (min-width: 1024px){
+  .details-menu[open] .details-itens-menu{animation: efeito-abrir-menu 300ms ease-in-out forwards;} 
+}
+
 
 
