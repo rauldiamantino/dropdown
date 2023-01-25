@@ -6,6 +6,7 @@ O objetivo deste projeto é treinar a criação de soluções, utilizando a meno
   <summary>
     Tecnologias utilizadas
   </summary>
+  <br>
   <ul>
     <li>HTML5</li>
     <li>ES6 JavaScript</li>
@@ -18,14 +19,15 @@ O objetivo deste projeto é treinar a criação de soluções, utilizando a meno
   <summary>
     Demonstração
   </summary>
-  <img src="assets/images/dropdown-view.gif">
+  <img src=".assets/images/dropdown-view.gif">
 </details>
 
 <details>
   <summary>
-    Ver projeto
+    Acessar projeto
   </summary>
-    https://rauldiamantino.github.io/dropdown/
+  <br>
+  https://rauldiamantino.github.io/dropdown/
 </details>
 
 
