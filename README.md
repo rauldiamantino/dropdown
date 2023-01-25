@@ -20,7 +20,7 @@ O objetivo deste projeto é treinar a criação de soluções, utilizando a meno
     Demonstração
   </summary>
   <br>
-  <img src="assets/images/readme/dropdown-view.gif">
+  <a href="#"><img src="assets/images/readme/dropdown-view.gif"></a>
 </details>
 
 <details>
