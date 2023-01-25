@@ -5,9 +5,15 @@
   }
 }
 
-@media (min-width: 1024px){
-  .details-menu[open] .details-itens-menu{animation: efeito-abrir-menu 300ms ease-in-out forwards;} 
+@keyframes efeito-abrir-menu-responsivo{
+  0%  {bottom:-100%;}
+  100%{bottom:0%;}
 }
 
+@media (min-width: 1024px){
+  .details-menu[open] .details-itens-menu{animation: efeito-abrir-menu 300ms ease-in-out forwards;}   
+}
 
-
+@media (max-width: 1024px){
+  .details-menu .details-itens-menu{animation: efeito-abrir-menu-responsivo 300ms ease-in-out forwards;}   
+}
