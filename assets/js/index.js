@@ -8,8 +8,6 @@ const $todosDetails = document.querySelectorAll('details')
 const fecharTagDetailsOrdenar = () => {
   const detailsOrdenar = document.querySelector('.details-menu.ordenar')
 
-  console.log()
-
   detailsOrdenar.removeAttribute('open')
 }
 

@@ -1,6 +1,2 @@
-@keyframes summary-svg {
-  from{transform: rotate(0)}
-  to{transform: rotate(-3.124rad);}
-}
-.details-menu[open] .svg-details{animation: summary-svg ease-in-out 0.5s forwards;}
-
+.details-menu .svg-details      {transform:rotate(0); transition:transform 500ms ease-in-out;}
+.details-menu[open] .svg-details{transform:rotate(-3.124rad); transition:transform 300ms ease-in-out;}
