@@ -18,7 +18,7 @@ O objetivo deste projeto é treinar a criação de soluções, utilizando a meno
   <summary>
     Demonstração
   </summary>
-  <img src=".assets/images/dropdown-view.gif">
+  <img src="assets/images/dropdown-view.gif">
 </details>
 
 <details>
