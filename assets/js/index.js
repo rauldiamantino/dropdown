@@ -6,20 +6,30 @@ const $todosDetails = document.querySelectorAll('details')
 
 // fecha detail Ordenar através do botão no responsivo
 const fecharTagDetailsOrdenar = () => {
-  const detailsOrdenar = document.querySelector('.details-menu.ordenar')
+  const $detailsOrdenar = document.querySelector('.details-menu.ordenar')
 
-  detailsOrdenar.removeAttribute('open')
+  $detailsOrdenar.removeAttribute('open')
 }
 
 // fecha demais details ao clicar em uma
 const fecharDemaisDetails = ($detailClicada) => {
+  const $detailsAnimacao = $detailClicada.querySelector('.details-itens-menu')
+
   $detailClicada.addEventListener('click', () => {
+    
+    resetarAnimacaoMenuDetails($detailsAnimacao)
+
     $todosDetails.forEach($detail => {
       if ($detail !== $detailClicada) {
         $detail.removeAttribute('open')
       }
     })
   })
+}
+
+const resetarAnimacaoMenuDetails = ($detailsAnimacao) => {
+  $detailsAnimacao.style.animation = 'none';
+  setTimeout(() => $detailsAnimacao.style.animation = "", 5);
 }
 
 
