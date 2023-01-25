@@ -1,4 +1,4 @@
-# dropdown
+# Dropdown horizontal com CSS
 
 O objetivo deste projeto é treinar a criação de soluções, utilizando a menor quantidade possível de código JavaScript.
 
@@ -18,6 +18,7 @@ O objetivo deste projeto é treinar a criação de soluções, utilizando a meno
   <summary>
     Demonstração
   </summary>
+  <img src=".assets/images/dropdown-view.gif">
 </details>
 
 <details>
