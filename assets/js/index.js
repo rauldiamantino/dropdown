@@ -6,7 +6,9 @@ const $todosDetails = document.querySelectorAll('details')
 
 // fecha detail Ordenar através do botão no responsivo
 const fecharTagDetailsOrdenar = () => {
-  const detailsOrdenar = document.querySelector('.ordenar')
+  const detailsOrdenar = document.querySelector('.details-menu.ordenar')
+
+  console.log()
 
   detailsOrdenar.removeAttribute('open')
 }
@@ -26,5 +28,3 @@ const fecharDemaisDetails = ($detailClicada) => {
 // Chamando as funções
 $btnFechar.addEventListener('click', () => fecharTagDetailsOrdenar())
 $todosDetails.forEach(fecharDemaisDetails)
-
-

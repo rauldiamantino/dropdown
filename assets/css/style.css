@@ -1,1 +1,1 @@
-body{background:red}/*# sourceMappingURL=style.css.map */
+@keyframes summary-svg{from{transform:rotate(0)}to{transform:rotate(-3.124rad)}}.details-menu[open] .svg-details{animation:summary-svg ease-in-out .5s forwards}/*# sourceMappingURL=style.css.map */

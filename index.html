@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
 
   <title>Menu</title>
 </head>
@@ -15,13 +16,18 @@
   <header class="h-10">
   </header>
   <nav class="relative flex items-center justify-end gap-5 h-12 px-4 lg:px-12 border-b">
-    <details class="marcas hidden lg:flex relative">
+
+
+    <details class="details-menu hidden lg:flex relative">
       <summary class="cursor-pointer list-none flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 15 15">
-          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="svg-details" viewBox="0 0 15 15">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
         </svg>
         Nossas marcas
+
       </summary>
+
       <div class="itens-menu absolute top-10 left-auto right-0 rounded-t-2xl rounded-none h-max bg-white shadow-md">
         <div class="flex flex-col lg:max-h-80 lg:w-max overflow-y-auto bg-white">
           <label for="levis" class="flex items-center gap-3 cursor-pointer w-full px-5 py-2 hover:bg-gray-100">
@@ -37,13 +43,13 @@
             Adidas
           </label>
         </div>
-      </div>      
+      </div>
     </details>
 
-    <details class="preco hidden lg:flex relative">
+    <details class="details-menu hidden lg:flex relative">
       <summary class="cursor-pointer list-none flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 15 15">
-          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="svg-details" viewBox="0 0 15 15">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
         </svg>
         Preço
       </summary>
@@ -77,10 +83,10 @@
       </div>
     </details>
 
-    <details class="tamanhos hidden lg:flex relative" id="tamanhos-details">
+    <details class="details-menu hidden lg:flex relative" id="tamanhos-details">
       <summary class="cursor-pointer list-none flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 15 15">
-          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="svg-details" viewBox="0 0 15 15">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
         </svg>
         Tamanhos
       </summary>
@@ -114,10 +120,10 @@
       </div>
     </details>
 
-    <details class="ordenar relative">
+    <details class="details-menu ordenar relative">
       <summary class="cursor-pointer list-none flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 15 15">
-          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="svg-details" viewBox="0 0 15 15">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
         </svg>
         Ordenar
       </summary>
@@ -125,9 +131,9 @@
         <div class="w-ful flex justify-between items-center rounded-t-2xl p-5 bg-white lg:hidden">
           <h2 class="font-bold">
             Ordenar
-          </h2>          
+          </h2>
           <svg class="btn-fechar-details cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
-            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" fill="#000"/>
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" fill="#000" />
           </svg>
         </div>
         <div class="flex flex-col h-40 lg:h-80 lg:w-max bg-white overflow-y-auto shadow-md">
