@@ -6,10 +6,9 @@ const fecharTagDetailsOrdenar = () => {
 };
 const fecharDemaisDetails = ($detailClicada) => {
     const $detailsAnimacao = $detailClicada.querySelector('.details-itens-menu');
-    console.log($detailsAnimacao);
-    $detailClicada.addEventListener('click', (e) => {
-        const alvo = (e.target.localName);
-        if (alvo == "summary") {
+    $detailClicada.addEventListener('click', (event) => {
+        const clicouFora = (event.target.localName);
+        if (clicouFora == "summary") {
             resetarAnimacaoMenuDetails($detailsAnimacao);
         }
         $todosDetails.forEach(($detail) => {

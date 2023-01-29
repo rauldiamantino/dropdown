@@ -14,12 +14,11 @@ const fecharTagDetailsOrdenar = () => {
 // fecha demais details ao clicar em uma
 const fecharDemaisDetails = ($detailClicada:HTMLElement) => {
   const $detailsAnimacao:HTMLElement = $detailClicada.querySelector('.details-itens-menu')  
-  console.log($detailsAnimacao)
 
-  $detailClicada.addEventListener('click', (e:any) => {
-    const alvo = (e.target.localName)  
+  $detailClicada.addEventListener('click', (event:any) => {
+    const clicouFora = (event.target.localName)  
       
-    if(alvo == "summary"){
+    if(clicouFora == "summary"){
       resetarAnimacaoMenuDetails($detailsAnimacao)
     }
 
