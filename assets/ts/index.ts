@@ -16,9 +16,9 @@ const fecharDemaisDetails = ($detailClicada:HTMLElement) => {
   const $detailsAnimacao:HTMLElement = $detailClicada.querySelector('.details-itens-menu')  
 
   $detailClicada.addEventListener('click', (event:any) => {
-    const clicouFora = (event.target.localName)  
+    const alvo = (event.target.localName)  
       
-    if(clicouFora == "summary"){
+    if(alvo == "summary"){
       resetarAnimacaoMenuDetails($detailsAnimacao)
     }
 
@@ -30,6 +30,14 @@ const fecharDemaisDetails = ($detailClicada:HTMLElement) => {
   })
 }
 
+// fecha details se clicar fora
+const $areaExterna:HTMLElement = document.querySelector('main')
+
+$areaExterna.addEventListener('click', () => {
+  $todosDetails.forEach(fecharDemaisDetails)
+})
+
+
 const resetarAnimacaoMenuDetails = ($detailsAnimacao:HTMLElement) => {
   $detailsAnimacao.style.animation = 'none';
   setTimeout(() => $detailsAnimacao.style.animation = "", 5);
@@ -37,4 +45,5 @@ const resetarAnimacaoMenuDetails = ($detailsAnimacao:HTMLElement) => {
 
 // Chamando as funções
 $btnFechar.addEventListener('click', () => fecharTagDetailsOrdenar())
+
 $todosDetails.forEach(fecharDemaisDetails)

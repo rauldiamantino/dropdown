@@ -7,8 +7,8 @@ const fecharTagDetailsOrdenar = () => {
 const fecharDemaisDetails = ($detailClicada) => {
     const $detailsAnimacao = $detailClicada.querySelector('.details-itens-menu');
     $detailClicada.addEventListener('click', (event) => {
-        const clicouFora = (event.target.localName);
-        if (clicouFora == "summary") {
+        const alvo = (event.target.localName);
+        if (alvo == "summary") {
             resetarAnimacaoMenuDetails($detailsAnimacao);
         }
         $todosDetails.forEach(($detail) => {
@@ -18,6 +18,10 @@ const fecharDemaisDetails = ($detailClicada) => {
         });
     });
 };
+const $areaExterna = document.querySelector('main');
+$areaExterna.addEventListener('click', () => {
+    $todosDetails.forEach(fecharDemaisDetails);
+});
 const resetarAnimacaoMenuDetails = ($detailsAnimacao) => {
     $detailsAnimacao.style.animation = 'none';
     setTimeout(() => $detailsAnimacao.style.animation = "", 5);
