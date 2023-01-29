@@ -1,31 +1,43 @@
-const $btnFechar = document.querySelector('.btn-fechar-details');
-const $todosDetails = document.querySelectorAll('details');
-const fecharTagDetailsOrdenar = () => {
-    const $detailsOrdenar = document.querySelector('.details-menu.ordenar');
-    $detailsOrdenar.removeAttribute('open');
-};
-const fecharDemaisDetails = ($detailClicada) => {
-    const $detailsAnimacao = $detailClicada.querySelector('.details-itens-menu');
-    $detailClicada.addEventListener('click', (event) => {
-        const alvo = (event.target.localName);
-        if (alvo == "summary") {
-            resetarAnimacaoMenuDetails($detailsAnimacao);
-        }
-        $todosDetails.forEach(($detail) => {
-            if ($detail !== $detailClicada) {
-                $detail.removeAttribute('open');
+const $todasDetails = document.querySelectorAll('details');
+document.addEventListener('click', (event) => {
+    const $areaExterna = document.querySelector('main');
+    const $btnFecharResponsivo = document.querySelector('.btn-fechar-details');
+    $todasDetails.forEach(($detail) => {
+        const alvo = event.target;
+        const $itensDetailClicada = alvo.parentNode.querySelector('.details-itens-menu');
+        fecharDemaisDetails(alvo, $detail);
+        fecharSeClicouFora(alvo, $areaExterna);
+        fecharSeClicouBtnResponsivo(alvo, $btnFecharResponsivo);
+        resetarAnimacaoMenuDetails($itensDetailClicada);
+    });
+});
+const fecharDemaisDetails = (alvo, $detail) => {
+    if (alvo.parentNode == $detail) {
+        $todasDetails.forEach(($detailAtual) => {
+            if ($detailAtual !== alvo.parentNode) {
+                $detailAtual.removeAttribute('open');
             }
         });
-    });
+    }
 };
-const $areaExterna = document.querySelector('main');
-$areaExterna.addEventListener('click', () => {
-    $todosDetails.forEach(fecharDemaisDetails);
-});
-const resetarAnimacaoMenuDetails = ($detailsAnimacao) => {
-    $detailsAnimacao.style.animation = 'none';
-    setTimeout(() => $detailsAnimacao.style.animation = "", 5);
+const fecharSeClicouFora = (alvo, $areaExterna) => {
+    if (alvo == $areaExterna) {
+        $todasDetails.forEach(($detail) => {
+            $detail.removeAttribute('open');
+        });
+    }
 };
-$btnFechar.addEventListener('click', () => fecharTagDetailsOrdenar());
-$todosDetails.forEach(fecharDemaisDetails);
+const fecharSeClicouBtnResponsivo = (alvo, $btnFecharResponsivo) => {
+    if (alvo.parentNode == $btnFecharResponsivo) {
+        $todasDetails.forEach(($detail) => {
+            $detail.removeAttribute('open');
+        });
+    }
+};
+const resetarAnimacaoMenuDetails = ($itensDetailClicada) => {
+    if ($itensDetailClicada) {
+        $itensDetailClicada.style.animation = 'none';
+        setTimeout(() => $itensDetailClicada.style.animation = "", 5);
+    }
+};
 //# sourceMappingURL=index.js.map

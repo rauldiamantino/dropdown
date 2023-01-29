@@ -1,49 +1,50 @@
-/* ---- constantes ---- */
-const $btnFechar:HTMLElement = document.querySelector('.btn-fechar-details')
-const $todosDetails:NodeList = document.querySelectorAll('details')
+const $todasDetails:NodeList = document.querySelectorAll('details')
 
-/* ---- funções ---- */
+document.addEventListener('click', (event:any) => {
+  const $areaExterna:HTMLElement = document.querySelector('main')      
+  const $btnFecharResponsivo:HTMLElement = document.querySelector('.btn-fechar-details')
 
-// fecha detail Ordenar através do botão no responsivo
-const fecharTagDetailsOrdenar = () => {
-  const $detailsOrdenar:HTMLElement = document.querySelector('.details-menu.ordenar')  
+  $todasDetails.forEach(($detail:HTMLElement) => {
+    const alvo:HTMLElement = event.target    
+    const $itensDetailClicada:HTMLElement = alvo.parentNode.querySelector('.details-itens-menu')
 
-  $detailsOrdenar.removeAttribute('open')
-}
-
-// fecha demais details ao clicar em uma
-const fecharDemaisDetails = ($detailClicada:HTMLElement) => {
-  const $detailsAnimacao:HTMLElement = $detailClicada.querySelector('.details-itens-menu')  
-
-  $detailClicada.addEventListener('click', (event:any) => {
-    const alvo = (event.target.localName)  
-      
-    if(alvo == "summary"){
-      resetarAnimacaoMenuDetails($detailsAnimacao)
-    }
-
-    $todosDetails.forEach(($detail:HTMLElement) =>  {
-      if ($detail !== $detailClicada) {
-        $detail.removeAttribute('open')        
-      }
-    })
+    fecharDemaisDetails(alvo, $detail)
+    fecharSeClicouFora(alvo, $areaExterna)
+    fecharSeClicouBtnResponsivo(alvo, $btnFecharResponsivo)
+    resetarAnimacaoMenuDetails($itensDetailClicada)
   })
-}
-
-// fecha details se clicar fora
-const $areaExterna:HTMLElement = document.querySelector('main')
-
-$areaExterna.addEventListener('click', () => {
-  $todosDetails.forEach(fecharDemaisDetails)
 })
 
-
-const resetarAnimacaoMenuDetails = ($detailsAnimacao:HTMLElement) => {
-  $detailsAnimacao.style.animation = 'none';
-  setTimeout(() => $detailsAnimacao.style.animation = "", 5);
+// funções
+const fecharDemaisDetails = (alvo:HTMLElement, $detail:HTMLElement) => {
+  if(alvo.parentNode == $detail) {
+    $todasDetails.forEach(($detailAtual:HTMLElement) => {
+      if ($detailAtual !== alvo.parentNode) {
+        $detailAtual.removeAttribute('open')
+      }
+    })      
+  }   
 }
 
-// Chamando as funções
-$btnFechar.addEventListener('click', () => fecharTagDetailsOrdenar())
+const fecharSeClicouFora = (alvo:HTMLElement, $areaExterna:HTMLElement) => {
+  if(alvo == $areaExterna) {
+    $todasDetails.forEach(($detail:HTMLElement) => {      
+      $detail.removeAttribute('open')      
+    })      
+  } 
+}
 
-$todosDetails.forEach(fecharDemaisDetails)
+const fecharSeClicouBtnResponsivo = (alvo:HTMLElement, $btnFecharResponsivo:HTMLElement) => {
+  if(alvo.parentNode == $btnFecharResponsivo) {
+    $todasDetails.forEach(($detail:HTMLElement) => {
+        $detail.removeAttribute('open')
+    })      
+  }    
+}
+
+const resetarAnimacaoMenuDetails = ($itensDetailClicada:HTMLElement) => {
+  if ($itensDetailClicada) {
+    $itensDetailClicada.style.animation = 'none';
+    setTimeout(() => $itensDetailClicada.style.animation = "", 5);
+  }
+}
