@@ -1,28 +1,29 @@
 /* ---- constantes ---- */
-const $btnFechar:any = document.querySelector('.btn-fechar-details')
+const $btnFechar:HTMLElement = document.querySelector('.btn-fechar-details')
 const $todosDetails:NodeList = document.querySelectorAll('details')
 
 /* ---- funções ---- */
 
 // fecha detail Ordenar através do botão no responsivo
 const fecharTagDetailsOrdenar = () => {
-  const $detailsOrdenar:any = document.querySelector('.details-menu.ordenar')  
+  const $detailsOrdenar:HTMLElement = document.querySelector('.details-menu.ordenar')  
 
   $detailsOrdenar.removeAttribute('open')
 }
 
 // fecha demais details ao clicar em uma
-const fecharDemaisDetails = ($detailClicada:any) => {
-  const $detailsAnimacao:any = $detailClicada.querySelector('.details-itens-menu')  
+const fecharDemaisDetails = ($detailClicada:HTMLElement) => {
+  const $detailsAnimacao:HTMLElement = $detailClicada.querySelector('.details-itens-menu')  
+  console.log($detailsAnimacao)
 
   $detailClicada.addEventListener('click', (e:any) => {
-    
+    const alvo = (e.target.localName)  
       
-    if(e.target.localName == "summary"){
+    if(alvo == "summary"){
       resetarAnimacaoMenuDetails($detailsAnimacao)
     }
 
-    $todosDetails.forEach(($detail:any) =>  {
+    $todosDetails.forEach(($detail:HTMLElement) =>  {
       if ($detail !== $detailClicada) {
         $detail.removeAttribute('open')        
       }

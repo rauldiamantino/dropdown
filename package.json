@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "node-modules": "^1.0.1"
+  },
+  "name": "dropdown",
+  "description": "O objetivo deste projeto é treinar a criação de soluções, utilizando a menor quantidade possível de código JavaScript.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rauldiamantino/dropdown.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rauldiamantino/dropdown/issues"
+  },
+  "homepage": "https://github.com/rauldiamantino/dropdown#readme",
+  "devDependencies": {
+    "tslint": "^6.1.3",
+    "typescript": "^4.4.4"
+  },
+  "keywords": []
+}
