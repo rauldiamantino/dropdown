@@ -1,14 +1,19 @@
 const $todasDetails = document.querySelectorAll('details');
 document.addEventListener('click', (event) => {
-    const $areaExterna = document.querySelector('main');
+    const $areaExterna = document.querySelector('.tail-backgrop-menu');
     const $btnFecharResponsivo = document.querySelector('.btn-fechar-details');
     $todasDetails.forEach(($detail) => {
         const alvo = event.target;
         const $itensDetailClicada = alvo.parentNode.querySelector('.details-itens-menu');
+        const $detailAberta = $detail.hasAttribute('open') && alvo.parentNode == $detail;
         fecharDemaisDetails(alvo, $detail);
         fecharSeClicouFora(alvo, $areaExterna);
         fecharSeClicouBtnResponsivo(alvo, $btnFecharResponsivo);
         resetarAnimacaoMenuDetails($itensDetailClicada);
+        exibeBackdropMenu(alvo, $detail);
+        if ($detailAberta) {
+            ocultaBackdropMenu();
+        }
     });
 });
 const fecharDemaisDetails = (alvo, $detail) => {
@@ -24,6 +29,7 @@ const fecharSeClicouFora = (alvo, $areaExterna) => {
     if (alvo == $areaExterna) {
         $todasDetails.forEach(($detail) => {
             $detail.removeAttribute('open');
+            ocultaBackdropMenu();
         });
     }
 };
@@ -31,6 +37,7 @@ const fecharSeClicouBtnResponsivo = (alvo, $btnFecharResponsivo) => {
     if (alvo.parentNode == $btnFecharResponsivo) {
         $todasDetails.forEach(($detail) => {
             $detail.removeAttribute('open');
+            ocultaBackdropMenu();
         });
     }
 };
@@ -39,5 +46,15 @@ const resetarAnimacaoMenuDetails = ($itensDetailClicada) => {
         $itensDetailClicada.style.animation = 'none';
         setTimeout(() => $itensDetailClicada.style.animation = "", 5);
     }
+};
+const exibeBackdropMenu = (alvo, $detail) => {
+    const $backdrop = document.querySelector('.tail-backgrop-menu');
+    if (alvo.parentNode === $detail) {
+        $backdrop.classList.remove('hidden');
+    }
+};
+const ocultaBackdropMenu = () => {
+    const $backdrop = document.querySelector('.tail-backgrop-menu');
+    $backdrop.classList.add('hidden');
 };
 //# sourceMappingURL=index.js.map
