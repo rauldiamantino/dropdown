@@ -51,10 +51,14 @@ const exibeBackdropMenu = (alvo, $detail) => {
     const $backdrop = document.querySelector('.tail-backgrop-menu');
     if (alvo.parentNode == $detail) {
         $backdrop.classList.remove('hidden');
+        removeBackgroundScroll();
     }
 };
 const ocultaBackdropMenu = () => {
     const $backdrop = document.querySelector('.tail-backgrop-menu');
     $backdrop.classList.add('hidden');
+    addBackgroundScroll();
 };
+const removeBackgroundScroll = () => (document.documentElement.style.overflow = "hidden");
+const addBackgroundScroll = () => (document.documentElement.style.overflow = "inherit");
 //# sourceMappingURL=index.js.map
