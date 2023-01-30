@@ -13,7 +13,7 @@ document.addEventListener('click', (event:any) => {
     fecharDemaisDetails(alvo, $detail)
     fecharSeClicouFora(alvo, $areaExterna)
     resetarAnimacaoMenuDetails($itensDetailClicada)
-    fecharSeClicouBtnResponsivo(alvo, $btnFecharResponsivo)
+    fecharSeClicouBtnRespons(alvo, $btnFecharResponsivo)
     
     if($detailAberta) {
       ocultaBackdropMenu()
@@ -41,7 +41,7 @@ const fecharSeClicouFora = (alvo:HTMLElement, $areaExterna:HTMLElement) => {
   } 
 }
 
-const fecharSeClicouBtnResponsivo = (alvo:HTMLElement, $btnFecharResponsivo:HTMLElement) => {
+const fecharSeClicouBtnRespons = (alvo:HTMLElement, $btnFecharResponsivo:HTMLElement) => {
   if(alvo.parentNode == $btnFecharResponsivo) {
     $todasDetails.forEach(($detail:HTMLElement) => {
         $detail.removeAttribute('open')   
