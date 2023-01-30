@@ -6,11 +6,11 @@ document.addEventListener('click', (event) => {
         const alvo = event.target;
         const $itensDetailClicada = alvo.parentNode.querySelector('.details-itens-menu');
         const $detailAberta = $detail.hasAttribute('open') && alvo.parentNode == $detail;
+        exibeBackdropMenu(alvo, $detail);
         fecharDemaisDetails(alvo, $detail);
         fecharSeClicouFora(alvo, $areaExterna);
-        fecharSeClicouBtnResponsivo(alvo, $btnFecharResponsivo);
         resetarAnimacaoMenuDetails($itensDetailClicada);
-        exibeBackdropMenu(alvo, $detail);
+        fecharSeClicouBtnResponsivo(alvo, $btnFecharResponsivo);
         if ($detailAberta) {
             ocultaBackdropMenu();
         }
@@ -49,7 +49,7 @@ const resetarAnimacaoMenuDetails = ($itensDetailClicada) => {
 };
 const exibeBackdropMenu = (alvo, $detail) => {
     const $backdrop = document.querySelector('.tail-backgrop-menu');
-    if (alvo.parentNode === $detail) {
+    if (alvo.parentNode == $detail) {
         $backdrop.classList.remove('hidden');
     }
 };

@@ -9,11 +9,11 @@ document.addEventListener('click', (event:any) => {
     const $itensDetailClicada:HTMLElement = alvo.parentNode.querySelector('.details-itens-menu')
     const $detailAberta:boolean = $detail.hasAttribute('open') && alvo.parentNode == $detail
 
+    exibeBackdropMenu(alvo, $detail)   
     fecharDemaisDetails(alvo, $detail)
     fecharSeClicouFora(alvo, $areaExterna)
-    fecharSeClicouBtnResponsivo(alvo, $btnFecharResponsivo)
     resetarAnimacaoMenuDetails($itensDetailClicada)
-    exibeBackdropMenu(alvo, $detail)   
+    fecharSeClicouBtnResponsivo(alvo, $btnFecharResponsivo)
     
     if($detailAberta) {
       ocultaBackdropMenu()
@@ -60,7 +60,7 @@ const resetarAnimacaoMenuDetails = ($itensDetailClicada:HTMLElement) => {
 const exibeBackdropMenu = (alvo:HTMLElement, $detail:HTMLElement) => {
   const $backdrop:HTMLElement = document.querySelector('.tail-backgrop-menu')
   
-  if (alvo.parentNode === $detail) {
+  if (alvo.parentNode == $detail) {
     $backdrop.classList.remove('hidden')
   }
 }
