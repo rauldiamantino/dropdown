@@ -11,11 +11,11 @@
 }
 
 @media (min-width: 1024px){
-  .details-menu[open] .details-itens-menu{animation: efeito-abrir-menu 300ms ease-in-out forwards;}   
+  .tail-details-menu[open] .details-itens-menu{animation: efeito-abrir-menu 300ms ease-in-out forwards;}   
 }
 
 @media (max-width: 1024px){
-  .details-menu .details-itens-menu{animation: efeito-abrir-menu-responsivo 300ms ease-in-out forwards;}   
+  .tail-details-menu .details-itens-menu{animation: efeito-abrir-menu-responsivo 300ms ease-in-out forwards;}   
 }
 
 .tail-backgrop-menu {
