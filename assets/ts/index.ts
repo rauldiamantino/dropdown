@@ -6,7 +6,7 @@ document.addEventListener('click', (event:any) => {
 
   $todasDetails.forEach(($detail:HTMLElement) => {
     const alvo:HTMLElement = event.target    
-    const $itensDetailClicada:HTMLElement = alvo.parentNode.querySelector('.details-itens-menu')
+    const $itensDetailClicada:HTMLElement = alvo.parentNode.querySelector('.tail-details-itens-menu')
     const $detailAberta:boolean = $detail.hasAttribute('open') && alvo.parentNode == $detail
 
     exibeBackdropMenu(alvo, $detail)   

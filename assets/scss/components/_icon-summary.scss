@@ -1,2 +1,2 @@
-.details-menu .svg-details      {transform:rotate(0); transition:transform 100ms ease-in-out;}
-.details-menu[open] .svg-details{transform:rotate(-3.124rad); transition:transform 300ms ease-in-out;}
+.tail-details-menu .tail-details-svg      {transform:rotate(0); transition:transform 100ms ease-in-out; pointer-events:none}
+.tail-details-menu[open] .tail-details-svg{transform:rotate(-180deg); transition:transform 300ms ease-in-out; pointer-events:none}

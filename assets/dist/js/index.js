@@ -4,13 +4,13 @@ document.addEventListener('click', (event) => {
     const $btnFecharResponsivo = document.querySelector('.btn-fechar-details');
     $todasDetails.forEach(($detail) => {
         const alvo = event.target;
-        const $itensDetailClicada = alvo.parentNode.querySelector('.details-itens-menu');
+        const $itensDetailClicada = alvo.parentNode.querySelector('.tail-details-itens-menu');
         const $detailAberta = $detail.hasAttribute('open') && alvo.parentNode == $detail;
         exibeBackdropMenu(alvo, $detail);
         fecharDemaisDetails(alvo, $detail);
         fecharSeClicouFora(alvo, $areaExterna);
         resetarAnimacaoMenuDetails($itensDetailClicada);
-        fecharSeClicouBtnResponsivo(alvo, $btnFecharResponsivo);
+        fecharSeClicouBtnRespons(alvo, $btnFecharResponsivo);
         if ($detailAberta) {
             ocultaBackdropMenu();
         }
@@ -33,7 +33,7 @@ const fecharSeClicouFora = (alvo, $areaExterna) => {
         });
     }
 };
-const fecharSeClicouBtnResponsivo = (alvo, $btnFecharResponsivo) => {
+const fecharSeClicouBtnRespons = (alvo, $btnFecharResponsivo) => {
     if (alvo.parentNode == $btnFecharResponsivo) {
         $todasDetails.forEach(($detail) => {
             $detail.removeAttribute('open');
