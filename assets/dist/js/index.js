@@ -1,4 +1,4 @@
 import { menuDetails } from './menu-details.js';
-const $todasDetails = document.querySelectorAll('details');
-menuDetails($todasDetails);
+const $filtroBuscaTagsDetail = document.querySelectorAll('details');
+menuDetails($filtroBuscaTagsDetail);
 //# sourceMappingURL=index.js.map

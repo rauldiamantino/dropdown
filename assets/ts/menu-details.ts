@@ -1,11 +1,11 @@
-export const menuDetails = ($todasDetails:NodeList) => {
-  // const $todasDetails:NodeList = document.querySelectorAll('details')
+export const menuDetails = ($filtroBuscaTagsDetail:NodeList) => {
+  // const $filtroBuscaTagsDetail:NodeList = document.querySelectorAll('details')
 
   document.addEventListener('click', (event:any) => {
     const $areaExterna:HTMLElement = document.querySelector('.tail-backgrop-menu')      
     const $btnFecharResponsivo:HTMLElement = document.querySelector('.btn-fechar-details')
 
-    $todasDetails.forEach(($detail:HTMLElement) => {
+    $filtroBuscaTagsDetail.forEach(($detail:HTMLElement) => {
       const alvo:HTMLElement = event.target    
       const $itensDetailClicada:HTMLElement = alvo.parentNode.querySelector('.tail-details-itens-menu')
       const $detailAberta:boolean = $detail.hasAttribute('open') && alvo.parentNode == $detail
@@ -27,7 +27,7 @@ export const menuDetails = ($todasDetails:NodeList) => {
   // funções
   const fecharDemaisDetails = (alvo:HTMLElement, $detail:HTMLElement) => {  
     if(alvo.parentNode == $detail) {
-      $todasDetails.forEach(($detailAtual:HTMLElement) => {
+      $filtroBuscaTagsDetail.forEach(($detailAtual:HTMLElement) => {
         if ($detailAtual !== alvo.parentNode) {
           $detailAtual.removeAttribute('open')        
         }           
@@ -37,7 +37,7 @@ export const menuDetails = ($todasDetails:NodeList) => {
 
   const fecharSeClicouFora = (alvo:HTMLElement, $areaExterna:HTMLElement) => {
     if(alvo == $areaExterna) {
-      $todasDetails.forEach(($detail:HTMLElement) => {      
+      $filtroBuscaTagsDetail.forEach(($detail:HTMLElement) => {      
         $detail.removeAttribute('open')    
         ocultaBackdropMenu()      
       })           
@@ -47,7 +47,7 @@ export const menuDetails = ($todasDetails:NodeList) => {
   const fecharSeClicouBtnRespons = (alvo:HTMLElement, $btnFecharResponsivo:HTMLElement) => {
     if(alvo.parentNode == $btnFecharResponsivo) {    
 
-      $todasDetails.forEach(($detail:HTMLElement) => {
+      $filtroBuscaTagsDetail.forEach(($detail:HTMLElement) => {
           $detail.removeAttribute('open')   
           ocultaBackdropMenu()     
       })      
