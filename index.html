@@ -13,20 +13,20 @@
 </head>
 
 <body>
-  <header class="h-max">
+  <header class="h-max text-black">
   </header>
   <nav class="relative flex items-center justify-end gap-5 h-12 px-4 lg:px-12 border-b">
 
     <details class="hidden lg:flex relative tail-details-menu">
-      <summary class="cursor-pointer list-none flex items-center gap-2 tail-details-menu-titulo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="tail-details-svg" viewBox="0 0 15 15">
-          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-        </svg>
+      <summary class="cursor-pointer list-none flex items-center gap-2 group tail-details-menu-titulo">
         Nossas marcas
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="opacity-50 group-hover:opacity-100 opacity-50 group-hover:opacity-100 tail-details-svg" viewBox="0 0 15 15">
+          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        </svg>
       </summary>
       <div class="absolute top-10 left-auto right-0 rounded-t-2xl lg:rounded-none h-max bg-white tail-details-itens-menu">
         <div class="absolute -top-1.5 right-3 h-8 w-8 transform rotate-45 bg-white z-10"></div>
-        <div class="absolute right-0 flex flex-col lg:max-h-80 lg:w-max overflow-y-auto bg-white z-40 shadow-sm">
+        <div class="absolute right-0 flex flex-col lg:max-h-80 lg:w-max overflow-y-auto bg-white z-40 shadow-sm divide-y">
           <label for="levis" class="tail-details-label">
             <input type="checkbox" name="nome-da-marca" id="levis">
             <span class="tail-details-checkbox"></span>
@@ -47,15 +47,15 @@
     </details>
 
     <details class="hidden lg:flex relative tail-details-menu">
-      <summary class="cursor-pointer list-none flex items-center gap-2 tail-details-menu-titulo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="tail-details-svg" viewBox="0 0 15 15">
+      <summary class="cursor-pointer list-none flex items-center gap-2 group tail-details-menu-titulo">
+        Preço
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="opacity-50 group-hover:opacity-100 tail-details-svg" viewBox="0 0 15 15">
           <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
         </svg>
-        Preço
       </summary>
       <div class="absolute top-10 left-auto right-0 rounded-t-2xl rounded-none h-max bg-white tail-details-itens-menu">
         <div class="absolute -top-1.5 right-3 h-8 w-8 transform rotate-45 bg-white z-10"></div>
-        <div class="absolute right-0 flex flex-col lg:max-h-80 lg:w-max overflow-y-auto bg-white z-20 shadow-sm">
+        <div class="absolute right-0 flex flex-col lg:max-h-80 lg:w-max overflow-y-auto bg-white z-20 shadow-sm divide-y">
           <label for="preco-0-20" class="tail-details-label">
             <input type="checkbox" name="preco" id="preco-0-20">
             <span class="tail-details-checkbox"></span>
@@ -91,15 +91,15 @@
     </details>
 
     <details class="hidden lg:flex relative tail-details-menu">
-      <summary class="cursor-pointer list-none flex items-center gap-2 tail-details-menu-titulo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="tail-details-svg" viewBox="0 0 15 15">
+      <summary class="cursor-pointer list-none flex items-center gap-2 group tail-details-menu-titulo">
+        Tamanhos
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="opacity-50 group-hover:opacity-100 tail-details-svg" viewBox="0 0 15 15">
           <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
         </svg>
-        Tamanhos
       </summary>
       <div class="absolute top-10 left-auto right-0 rounded-t-2xl rounded-none h-max bg-white tail-details-itens-menu">
         <div class="absolute -top-1.5 right-3 h-8 w-8 transform rotate-45 bg-white z-10"></div>
-        <div class="absolute right-0 flex flex-col max-h-80 lg:w-max overflow-y-auto bg-white z-20 shadow-sm">
+        <div class="absolute right-0 flex flex-col max-h-80 lg:w-max overflow-y-auto bg-white z-20 shadow-sm divide-y">
           <label for="tamanho-u" class="tail-details-label">
             <input type="checkbox" name="variacao-tamanho" id="tamanho-u">
             <span class="tail-details-checkbox"></span>
@@ -135,13 +135,13 @@
     </details>
 
     <details class="ordenar relative tail-details-menu">
-      <summary class="cursor-pointer list-none flex items-center gap-2 tail-details-menu-titulo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="tail-details-svg" viewBox="0 0 15 15">
+      <summary class="cursor-pointer list-none flex items-center gap-2 group tail-details-menu-titulo">
+        Ordenar
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="opacity-50 group-hover:opacity-100 tail-details-svg" viewBox="0 0 15 15">
           <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
         </svg>
-        Ordenar
       </summary>
-      <div class="fixed left-0 -bottom-full right-0 lg:absolute lg:top-10 lg:left-auto lg:right-0 rounded-t-2xl lg:rounded-none lg:h-max z-20 tail-details-itens-menu ">
+      <div class="fixed left-0 -bottom-full right-0 lg:absolute lg:top-10 lg:left-auto lg:right-0 rounded-t-2xl lg:rounded-none lg:h-max z-20 tail-details-itens-menu">
         <div class="absolute hidden lg:flex -top-1.5 right-3 h-8 w-8 transform rotate-45 bg-white z-10"></div>
         <div class="w-ful flex justify-between items-center rounded-t-2xl p-5 bg-white lg:hidden">
           <h2 class="font-bold">
@@ -154,39 +154,41 @@
           </button>
         </div>
 
-        <div class="sticky right-0 flex flex-col h-40 lg:h-80 lg:w-max bg-white overflow-y-auto lg:shadow-sm z-20">
-          <input type="radio" name="ordenar" id="relevancia" class="hidden">
-          <label for="relevancia" class="cursor-pointer w-full px-5 py-2 lg:hover:text-gray-600 tail-details-label">Relevância</label>
-          <input type="radio" name="ordenar" id="melhores-avaliados" class="hidden">
-          <label for="melhores-avaliados" class="cursor-pointer w-full px-5 py-2 lg:hover:text-gray-600 tail-details-label">
+        <div class="absolute right-0 flex flex-col h-40 lg:h-80 lg:w-max bg-white overflow-y-auto lg:shadow-sm z-20 divide-y">
+          <label for="relevancia" class="cursor-pointer w-full px-5 py-2 tail-details-label">
+            <input type="radio" name="ordenar" id="relevancia" class="hidden">
+            Relevância
+          </label>
+          <label for="melhores-avaliados" class="cursor-pointer w-full px-5 py-2 tail-details-label">
+            <input type="radio" name="ordenar" id="melhores-avaliados" class="hidden">
             Melhores avaliados
           </label>
-          <input type="radio" name="ordenar" id="a-z" class="hidden">
-          <label for="a-z" class="cursor-pointer w-full px-5 py-2 lg:hover:text-gray-600 tail-details-label">
+          <label for="a-z" class="cursor-pointer w-full px-5 py-2 tail-details-label">
+            <input type="radio" name="ordenar" id="a-z" class="hidden">
             A-z
           </label>
-          <input type="radio" name="ordenar" id="z-a" class="hidden">
-          <label for="z-a" class="cursor-pointer w-full px-5 py-2 lg:hover:text-gray-600 tail-details-label">
+          <label for="z-a" class="cursor-pointer w-full px-5 py-2 tail-details-label">
+            <input type="radio" name="ordenar" id="z-a" class="hidden">
             Z-a
           </label>
-          <input type="radio" name="ordenar" id="menor-preco" class="hidden">
-          <label for="menor-preco" class="cursor-pointer w-full px-5 py-2 lg:hover:text-gray-600 tail-details-label">
+          <label for="menor-preco" class="cursor-pointer w-full px-5 py-2 tail-details-label">
+            <input type="radio" name="ordenar" id="menor-preco" class="hidden">
             Menor preço
           </label>
-          <input type="radio" name="ordenar" id="maior-preco" class="peer/maior-preco hidden">
-          <label for="maior-preco" class="cursor-pointer w-full px-5 py-2 lg:hover:text-gray-600 tail-details-label">
+          <label for="maior-preco" class="cursor-pointer w-full px-5 py-2 tail-details-label">
+            <input type="radio" name="ordenar" id="maior-preco" class="peer/maior-preco hidden">
             Maior preço
           </label>
-          <input type="radio" name="ordenar" id="novidades" class="peer/novidades hidden">
-          <label for="novidades" class="cursor-pointer w-full px-5 py-2 lg:hover:text-gray-600 tail-details-label">
+          <label for="novidades" class="cursor-pointer w-full px-5 py-2 tail-details-label">
+            <input type="radio" name="ordenar" id="novidades" class="peer/novidades hidden">
             Novidades
           </label>
-          <input type="radio" name="ordenar" id="maior-desconto" class="peer/maior-desconto hidden">
-          <label for="maior-desconto" class="cursor-pointer w-full px-5 py-2 lg:hover:text-gray-600 tail-details-label">
+          <label for="maior-desconto" class="cursor-pointer w-full px-5 py-2 tail-details-label">
+            <input type="radio" name="ordenar" id="maior-desconto" class="peer/maior-desconto hidden">
             Maior desconto
           </label>
-          <input type="radio" name="ordenar" id="mais-vendidos" class="hidden">
-          <label for="mais-vendidos" class="cursor-pointer w-full px-5 py-2 lg:hover:text-gray-600 tail-details-label">
+          <label for="mais-vendidos" class="cursor-pointer w-full px-5 py-2 tail-details-label">
+            <input type="radio" name="ordenar" id="mais-vendidos" class="hidden">
             Mais vendidos
           </label>
         </div>
