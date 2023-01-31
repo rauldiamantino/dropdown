@@ -7,8 +7,6 @@
     "noImplicitAny": false,
     "removeComments": true,
     "preserveConstEnums": true,
-    "sourceMap": true,
-    "allowJs": false
-    
+    "sourceMap": true,  
   }
 }
