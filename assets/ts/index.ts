@@ -1,4 +1,4 @@
-import { menuDetails } from './menu-details.js';
+import { menuDetails } from './componentes/menu-details.js';
 
 const $filtroBuscaTagsDetail:NodeList = document.querySelectorAll('details')
 
