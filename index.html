@@ -11,12 +11,12 @@
   <title>Menu</title>
 </head>
 
-<body>
-  <header class="h-max text-black">
+<body class="text-gray-700">
+  <header class="h-max">
   </header>
   <nav class="relative flex items-center justify-end gap-5 h-12 px-4 lg:px-12 border-b">
 
-    <details class="hidden lg:flex relative tail-details-menu">
+    <details class="hidden lg:flex relative tail-details-menu w-max">
       <summary class="cursor-pointer list-none flex items-center gap-2 group tail-details-menu-titulo">
         Nossas marcas
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="opacity-50 group-hover:opacity-100 opacity-50 group-hover:opacity-100 tail-details-svg" viewBox="0 0 15 15">
@@ -29,17 +29,17 @@
           <label for="levis" class="tail-details-label">
             <input type="checkbox" name="nome-da-marca" id="levis">
             <span class="tail-details-checkbox"></span>
-            Levi's
+            <span class="class="tail-details-text"">Levi's</span>
           </label>
           <label for="calvin-klein" class="tail-details-label">
             <input type="checkbox" name="nome-da-marca" id="calvin-klein">
             <span class="tail-details-checkbox"></span>
-            Calvin Klein
+            <span class="tail-details-text">Calvin Klein</span>
           </label>
           <label for="adidas" class="tail-details-label">
             <input type="checkbox" name="nome-da-marca" id="adidas">
             <span class="tail-details-checkbox"></span>
-            Adidas
+            <span class="tail-details-text">Adidas</span>
           </label>
         </div>
       </div>
@@ -47,7 +47,7 @@
 
     <details class="hidden lg:flex relative tail-details-menu">
       <summary class="cursor-pointer list-none flex items-center gap-2 group tail-details-menu-titulo">
-        Preço
+        <span class="tail-details-text">Preço</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="opacity-50 group-hover:opacity-100 tail-details-svg" viewBox="0 0 15 15">
           <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
         </svg>
@@ -58,32 +58,32 @@
           <label for="preco-0-20" class="tail-details-label">
             <input type="checkbox" name="preco" id="preco-0-20">
             <span class="tail-details-checkbox"></span>
-            R$0 - R$20 (2)
+            <span class="tail-details-text">R$0 - R$20 (2)</span>
           </label>
           <label for="preco-20-50" class="tail-details-label">
             <input type="checkbox" name="preco" id="preco-20-50">
             <span class="tail-details-checkbox"></span>
-            R$20 - R$50 (20)
+            <span class="tail-details-text">R$20 - R$50 (20)</span>
           </label>
           <label for="preco-50-100" class="tail-details-label">
             <input type="checkbox" name="preco" id="preco-50-100">
             <span class="tail-details-checkbox"></span>
-            R$50 - R$100 (61)
+            <span class="tail-details-text">R$50 - R$100 (61)</span>
           </label>
           <label for="preco-100-200" class="tail-details-label">
             <input type="checkbox" name="preco" id="preco-100-200">
             <span class="tail-details-checkbox"></span>
-            R$100 - R$200 (149)
+            <span class="tail-details-text">R$100 - R$200 (149)</span>
           </label>
           <label for="preco-200-500" class="tail-details-label">
             <input type="checkbox" name="preco" id="preco-200-500">
             <span class="tail-details-checkbox"></span>
-            R$200 - R$500 (109)
+            <span class="tail-details-text">R$200 - R$500 (109)</span>
           </label>
           <label for="preco-500-mais" class="tail-details-label">
             <input type="checkbox" name="preco" id="preco-500-mais">
             <span class="tail-details-checkbox"></span>
-            R$500+ (93)
+            <span class="tail-details-text">R$500+ (93)</span>
           </label>
         </div>
       </div>
@@ -102,32 +102,32 @@
           <label for="tamanho-u" class="tail-details-label">
             <input type="checkbox" name="variacao-tamanho" id="tamanho-u">
             <span class="tail-details-checkbox"></span>
-            U (405)
+            <span class="tail-details-text">U (405)</span>
           </label>
           <label for="tamanho-g" class="tail-details-label">
             <input type="checkbox" name="variacao-tamanho" id="tamanho-g">
             <span class="tail-details-checkbox"></span>
-            G (15)
+            <span class="tail-details-text">G (15)</span>
           </label>
           <label for="tamanho-m" class="tail-details-label">
             <input type="checkbox" name="variacao-tamanho" id="tamanho-m">
             <span class="tail-details-checkbox"></span>
-            M (14)
+            <span class="tail-details-text">M (14)</span>
           </label>
           <label for="tamanho-p" class="tail-details-label">
             <input type="checkbox" name="variacao-tamanho" id="tamanho-p">
             <span class="tail-details-checkbox"></span>
-            P (12)
+            <span class="tail-details-text">P (12)</span>
           </label>
           <label for="tamanho-gg" class="tail-details-label">
             <input type="checkbox" name="variacao-tamanho" id="tamanho-gg">
             <span class="tail-details-checkbox"></span>
-            GG (9)
+            <span class="tail-details-text">GG (9)</span>
           </label>
           <label for="tamanho-14" class="tail-details-label">
             <input type="checkbox" name="variacao-tamanho" id="tamanho-14">
             <span class="tail-details-checkbox"></span>
-            14 (5)
+            <span class="tail-details-text">14 (5)</span>
           </label>
         </div>
       </div>
@@ -146,8 +146,8 @@
           <h2 class="font-bold">
             Ordenar
           </h2>
-          <button class="btn-fechar-details">
-            <svg class=" cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
+          <button class="cursor-pointer btn-fechar-details">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
               <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" fill="#000" />
             </svg>
           </button>
@@ -156,39 +156,39 @@
         <div class="sticky right-0 flex flex-col h-40 lg:h-80 lg:w-max bg-white overflow-y-auto lg:shadow-sm z-20 lg:divide-y">
           <label for="relevancia" class="cursor-pointer w-full px-5 py-2 tail-details-label">
             <input type="radio" name="ordenar" id="relevancia" class="hidden">
-            Relevância
+            <span class="tail-details-text">Relevância</span>
           </label>
           <label for="melhores-avaliados" class="cursor-pointer w-full px-5 py-2 tail-details-label">
             <input type="radio" name="ordenar" id="melhores-avaliados" class="hidden">
-            Melhores avaliados
+            <span class="tail-details-text">Melhores avaliados</span>
           </label>
           <label for="a-z" class="cursor-pointer w-full px-5 py-2 tail-details-label">
             <input type="radio" name="ordenar" id="a-z" class="hidden">
-            A-z
+            <span class="tail-details-text">A-z</span>
           </label>
           <label for="z-a" class="cursor-pointer w-full px-5 py-2 tail-details-label">
             <input type="radio" name="ordenar" id="z-a" class="hidden">
-            Z-a
+            <span class="tail-details-text">Z-a</span>
           </label>
           <label for="menor-preco" class="cursor-pointer w-full px-5 py-2 tail-details-label">
             <input type="radio" name="ordenar" id="menor-preco" class="hidden">
-            Menor preço
+            <span class="tail-details-text">Menor preço</span>
           </label>
           <label for="maior-preco" class="cursor-pointer w-full px-5 py-2 tail-details-label">
             <input type="radio" name="ordenar" id="maior-preco" class="peer/maior-preco hidden">
-            Maior preço
+            <span class="tail-details-text">Maior preço</span>
           </label>
           <label for="novidades" class="cursor-pointer w-full px-5 py-2 tail-details-label">
             <input type="radio" name="ordenar" id="novidades" class="peer/novidades hidden">
-            Novidades
+            <span class="tail-details-text">Novidades</span>
           </label>
           <label for="maior-desconto" class="cursor-pointer w-full px-5 py-2 tail-details-label">
             <input type="radio" name="ordenar" id="maior-desconto" class="peer/maior-desconto hidden">
-            Maior desconto
+            <span class="tail-details-text">Maior desconto</span>
           </label>
           <label for="mais-vendidos" class="cursor-pointer w-full px-5 py-2 tail-details-label">
             <input type="radio" name="ordenar" id="mais-vendidos" class="hidden">
-            Mais vendidos
+            <span class="tail-details-text">Mais vendidos</span>
           </label>
         </div>
       </div>
