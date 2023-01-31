@@ -19,7 +19,7 @@ document.addEventListener('click', (event:any) => {
     fecharSeClicouFora(alvo, $areaExterna)
     resetarAnimacaoMenuDetails($itensDetailClicada)
     fecharSeClicouBtnRespons(alvo, $btnFecharResponsivo)
-    recarregarPaginaSelecionarInput($inputsDetail)      
+    // recarregarPaginaSelecionarInput($inputsDetail)      
   })
 })
 
