@@ -8,16 +8,18 @@ document.addEventListener('click', (event:any) => {
     const alvo:HTMLElement = event.target    
     const $itensDetailClicada:HTMLElement = alvo.parentNode.querySelector('.tail-details-itens-menu')
     const $detailAberta:boolean = $detail.hasAttribute('open') && alvo.parentNode == $detail
+    const $inputsDetail:NodeList = $detail.querySelectorAll('input')
 
     exibeBackdropMenu(alvo, $detail)   
     fecharDemaisDetails(alvo, $detail)
     fecharSeClicouFora(alvo, $areaExterna)
     resetarAnimacaoMenuDetails($itensDetailClicada)
     fecharSeClicouBtnRespons(alvo, $btnFecharResponsivo)
+    recarregarPaginaSelecionarInput($inputsDetail)
     
     if($detailAberta) {
       ocultaBackdropMenu()
-    }
+    }      
   })
 })
 
@@ -78,3 +80,11 @@ const ocultaBackdropMenu = () => {
 const removeBackgroundScroll = () => (document.documentElement.style.overflow = "hidden");
 
 const addBackgroundScroll = () => (document.documentElement.style.overflow = "inherit");
+
+const recarregarPaginaSelecionarInput = ($inputsDetail:NodeList) => {
+  $inputsDetail.forEach(($input:HTMLInputElement) => {
+    $input.addEventListener('click', () => {
+      window.location.reload()
+    })
+  })
+}

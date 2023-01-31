@@ -6,6 +6,7 @@ document.addEventListener('click', (event) => {
         const alvo = event.target;
         const $itensDetailClicada = alvo.parentNode.querySelector('.tail-details-itens-menu');
         const $detailAberta = $detail.hasAttribute('open') && alvo.parentNode == $detail;
+        const $inputsDetail = $detail.querySelectorAll('input');
         exibeBackdropMenu(alvo, $detail);
         fecharDemaisDetails(alvo, $detail);
         fecharSeClicouFora(alvo, $areaExterna);
@@ -14,6 +15,11 @@ document.addEventListener('click', (event) => {
         if ($detailAberta) {
             ocultaBackdropMenu();
         }
+        $inputsDetail.forEach(($input) => {
+            $input.addEventListener('click', () => {
+                window.location.reload();
+            });
+        });
     });
 });
 const fecharDemaisDetails = (alvo, $detail) => {
