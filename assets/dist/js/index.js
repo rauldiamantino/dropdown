@@ -7,19 +7,15 @@ document.addEventListener('click', (event) => {
         const $itensDetailClicada = alvo.parentNode.querySelector('.tail-details-itens-menu');
         const $detailAberta = $detail.hasAttribute('open') && alvo.parentNode == $detail;
         const $inputsDetail = $detail.querySelectorAll('input');
+        if ($detailAberta) {
+            ocultaBackdropMenu();
+        }
         exibeBackdropMenu(alvo, $detail);
         fecharDemaisDetails(alvo, $detail);
         fecharSeClicouFora(alvo, $areaExterna);
         resetarAnimacaoMenuDetails($itensDetailClicada);
         fecharSeClicouBtnRespons(alvo, $btnFecharResponsivo);
-        if ($detailAberta) {
-            ocultaBackdropMenu();
-        }
-        $inputsDetail.forEach(($input) => {
-            $input.addEventListener('click', () => {
-                window.location.reload();
-            });
-        });
+        recarregarPaginaSelecionarInput($inputsDetail);
     });
 });
 const fecharDemaisDetails = (alvo, $detail) => {
@@ -68,4 +64,11 @@ const ocultaBackdropMenu = () => {
 };
 const removeBackgroundScroll = () => (document.documentElement.style.overflow = "hidden");
 const addBackgroundScroll = () => (document.documentElement.style.overflow = "inherit");
+const recarregarPaginaSelecionarInput = ($inputsDetail) => {
+    $inputsDetail.forEach(($input) => {
+        $input.addEventListener('click', () => {
+            window.location.reload();
+        });
+    });
+};
 //# sourceMappingURL=index.js.map

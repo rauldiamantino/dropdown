@@ -10,16 +10,16 @@ document.addEventListener('click', (event:any) => {
     const $detailAberta:boolean = $detail.hasAttribute('open') && alvo.parentNode == $detail
     const $inputsDetail:NodeList = $detail.querySelectorAll('input')
 
+    if($detailAberta) {
+      ocultaBackdropMenu()
+    }      
+
     exibeBackdropMenu(alvo, $detail)   
     fecharDemaisDetails(alvo, $detail)
     fecharSeClicouFora(alvo, $areaExterna)
     resetarAnimacaoMenuDetails($itensDetailClicada)
     fecharSeClicouBtnRespons(alvo, $btnFecharResponsivo)
-    recarregarPaginaSelecionarInput($inputsDetail)
-    
-    if($detailAberta) {
-      ocultaBackdropMenu()
-    }      
+    recarregarPaginaSelecionarInput($inputsDetail)      
   })
 })
 
