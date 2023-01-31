@@ -43,8 +43,9 @@ const fecharSeClicouBtnRespons = (alvo, $btnFecharResponsivo) => {
 };
 const resetarAnimacaoMenuDetails = ($itensDetailClicada) => {
     if ($itensDetailClicada) {
-        $itensDetailClicada.style.animation = 'none';
-        setTimeout(() => $itensDetailClicada.style.animation = "", 5);
+        $itensDetailClicada.style.animation = "none";
+        $itensDetailClicada.offsetHeight;
+        $itensDetailClicada.style.animation = null;
     }
 };
 const exibeBackdropMenu = (alvo, $detail) => {

@@ -42,7 +42,8 @@ const fecharSeClicouFora = (alvo:HTMLElement, $areaExterna:HTMLElement) => {
 }
 
 const fecharSeClicouBtnRespons = (alvo:HTMLElement, $btnFecharResponsivo:HTMLElement) => {
-  if(alvo.parentNode == $btnFecharResponsivo) {
+  if(alvo.parentNode == $btnFecharResponsivo) {    
+
     $todasDetails.forEach(($detail:HTMLElement) => {
         $detail.removeAttribute('open')   
         ocultaBackdropMenu()     
@@ -51,9 +52,10 @@ const fecharSeClicouBtnRespons = (alvo:HTMLElement, $btnFecharResponsivo:HTMLEle
 }
 
 const resetarAnimacaoMenuDetails = ($itensDetailClicada:HTMLElement) => {
-  if ($itensDetailClicada) {
-    $itensDetailClicada.style.animation = 'none';
-    setTimeout(() => $itensDetailClicada.style.animation = "", 5);
+  if($itensDetailClicada) {
+    $itensDetailClicada.style.animation = "none"
+    $itensDetailClicada.offsetHeight
+    $itensDetailClicada.style.animation = null
   }
 }
 
