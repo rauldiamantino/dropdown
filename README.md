@@ -2,6 +2,14 @@
 
 O objetivo deste projeto é treinar a criação de soluções, utilizando a menor quantidade possível de código JavaScript.
 
+<details open>
+  <summary>
+    Demonstração
+  </summary>
+  <br>
+  <a href="#"><img src="assets/images/readme/dropdown.gif"></a>
+</details>
+
 <details>
   <summary>
     Tecnologias utilizadas
@@ -13,14 +21,6 @@ O objetivo deste projeto é treinar a criação de soluções, utilizando a meno
     <li>Typescript v4.4.4</li>
     <li>TailwindCss v2.2.19</li>
   </ul>
-</details>
-
-<details>
-  <summary>
-    Demonstração
-  </summary>
-  <br>
-  <a href="#"><img src="assets/images/readme/dropdown-view.gif"></a>
 </details>
 
 <details>
