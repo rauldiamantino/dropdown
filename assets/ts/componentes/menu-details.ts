@@ -1,23 +1,23 @@
 const menuDetails = ($filtroBuscaTagsDetail:NodeList) => {
 
   document.addEventListener('click', (event:any) => {
-    const $areaExterna:HTMLElement = document.querySelector('.tail-backgrop-menu')      
+    const $areaExterna:HTMLElement = document.querySelector('.tail-backdrop-menu')      
     const $btnFecharResponsivo:HTMLElement = document.querySelector('.tail-details-btn-fechar')
 
     $filtroBuscaTagsDetail.forEach(($detail:HTMLElement) => {
       const alvo:HTMLElement = event.target    
       const $itensDetailClicada:HTMLElement = alvo.parentNode.querySelector('.tail-details-itens-menu')
       const $detailAberta:boolean = $detail.hasAttribute('open') && alvo.parentNode == $detail      
-
-      if($detailAberta) {
-        ocultaBackdropMenu()
-      }      
-
+      
       exibeBackdropMenu(alvo, $detail)   
       fecharDemaisDetails(alvo, $detail)
       fecharSeClicouFora(alvo, $areaExterna)
       resetarAnimacaoMenuDetails($itensDetailClicada)
       fecharSeClicouBtnRespons(alvo, $btnFecharResponsivo)       
+
+      if ($detailAberta) {
+        ocultaBackdropMenu()        
+      }
     })
   })
 
@@ -36,8 +36,8 @@ const menuDetails = ($filtroBuscaTagsDetail:NodeList) => {
 
   const fecharSeClicouFora = (alvo:HTMLElement, $areaExterna:HTMLElement) => {
     if(alvo == $areaExterna) {
-      $filtroBuscaTagsDetail.forEach(($detail:HTMLElement) => {      
-        $detail.removeAttribute('open')    
+      $filtroBuscaTagsDetail.forEach(($tagDetail:HTMLElement) => {      
+        $tagDetail.removeAttribute('open')            
         ocultaBackdropMenu()      
       })           
     } 
@@ -47,8 +47,8 @@ const menuDetails = ($filtroBuscaTagsDetail:NodeList) => {
 
     if(alvo == $btnFecharResponsivo) {    
 
-      $filtroBuscaTagsDetail.forEach(($detail:HTMLElement) => {        
-          $detail.removeAttribute('open')   
+      $filtroBuscaTagsDetail.forEach(($tagDetail:HTMLElement) => {        
+          $tagDetail.removeAttribute('open')   
           ocultaBackdropMenu()     
       })      
     }    
@@ -63,7 +63,7 @@ const menuDetails = ($filtroBuscaTagsDetail:NodeList) => {
   }
 
   const exibeBackdropMenu = (alvo:HTMLElement, $detail:HTMLElement) => {
-    const $backdrop:HTMLElement = document.querySelector('.tail-backgrop-menu')
+    const $backdrop:HTMLElement = document.querySelector('.tail-backdrop-menu')
     
     if (alvo.parentNode == $detail) {
       $backdrop.classList.remove('hidden')
@@ -72,10 +72,10 @@ const menuDetails = ($filtroBuscaTagsDetail:NodeList) => {
   }
 
   const ocultaBackdropMenu = () => {
-    const $backdrop:HTMLElement = document.querySelector('.tail-backgrop-menu')
-
-    $backdrop.classList.add('hidden')
-    addBackgroundScroll()
+    const $backdrop:HTMLElement = document.querySelector('.tail-backdrop-menu')
+      
+    $backdrop.classList.add('hidden')    
+    addBackgroundScroll()    
   }
 
   const removeBackgroundScroll = () => (document.documentElement.style.overflow = "hidden");
