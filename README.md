@@ -35,14 +35,11 @@ Menu horizontal com animações CSS, e armazenamento da escolha do usuário no l
 
 <summary>Informações do Ambiente</summary>
 
-- Clonar o repositório
--- `git clone https://github.com/rauldiamantino/dropdown`
+- Clonar o repositório: `git clone https://github.com/rauldiamantino/dropdown`
 
-- Compilar Sass
--- `sass assets/scss/style.scss:assets/dist/css/style.css --style compressed`
+- Compilar Sass: `sass assets/scss/style.scss:assets/dist/css/style.css --style compressed`
 
-- Compilar TypeScript
--- `npx tsc`
+- Compilar TypeScript: `npx tsc`
 
 </details>
 
