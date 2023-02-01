@@ -1,6 +1,6 @@
 # Dropdown horizontal com CSS
 
-Menu horizontal com animações em Animation CSS, e armazenamento da escolha do usuário no localStorage.
+Menu horizontal com animações CSS, e armazenamento da escolha do usuário no localStorage.
 
 <details open>
   <summary>
