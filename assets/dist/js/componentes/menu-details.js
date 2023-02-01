@@ -1,7 +1,7 @@
 const menuDetails = ($filtroBuscaTagsDetail) => {
     document.addEventListener('click', (event) => {
         const $areaExterna = document.querySelector('.tail-backgrop-menu');
-        const $btnFecharResponsivo = document.querySelector('.btn-fechar-details');
+        const $btnFecharResponsivo = document.querySelector('.tail-details-btn-fechar');
         $filtroBuscaTagsDetail.forEach(($detail) => {
             const alvo = event.target;
             const $itensDetailClicada = alvo.parentNode.querySelector('.tail-details-itens-menu');
@@ -18,9 +18,10 @@ const menuDetails = ($filtroBuscaTagsDetail) => {
     });
     const fecharDemaisDetails = (alvo, $detail) => {
         if (alvo.parentNode == $detail) {
-            $filtroBuscaTagsDetail.forEach(($detailAtual) => {
-                if ($detailAtual !== alvo.parentNode) {
-                    $detailAtual.removeAttribute('open');
+            $filtroBuscaTagsDetail.forEach(($tagDetail) => {
+                const $detailAtual = $tagDetail == alvo.parentNode;
+                if (!$detailAtual) {
+                    $tagDetail.removeAttribute('open');
                 }
             });
         }
@@ -34,7 +35,7 @@ const menuDetails = ($filtroBuscaTagsDetail) => {
         }
     };
     const fecharSeClicouBtnRespons = (alvo, $btnFecharResponsivo) => {
-        if (alvo.parentNode == $btnFecharResponsivo) {
+        if (alvo == $btnFecharResponsivo) {
             $filtroBuscaTagsDetail.forEach(($detail) => {
                 $detail.removeAttribute('open');
                 ocultaBackdropMenu();

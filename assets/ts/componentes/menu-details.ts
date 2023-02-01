@@ -43,10 +43,11 @@ const menuDetails = ($filtroBuscaTagsDetail:NodeList) => {
     } 
   }
 
-  const fecharSeClicouBtnRespons = (alvo:HTMLElement, $btnFecharResponsivo:HTMLElement) => {
-    if(alvo.parentNode == $btnFecharResponsivo) {    
+  const fecharSeClicouBtnRespons = (alvo:HTMLElement, $btnFecharResponsivo:HTMLElement) => {    
 
-      $filtroBuscaTagsDetail.forEach(($detail:HTMLElement) => {
+    if(alvo == $btnFecharResponsivo) {    
+
+      $filtroBuscaTagsDetail.forEach(($detail:HTMLElement) => {        
           $detail.removeAttribute('open')   
           ocultaBackdropMenu()     
       })      
