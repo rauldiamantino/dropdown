@@ -1,5 +1,4 @@
-export const menuDetails = ($filtroBuscaTagsDetail:NodeList) => {
-  // const $filtroBuscaTagsDetail:NodeList = document.querySelectorAll('details')
+const menuDetails = ($filtroBuscaTagsDetail:NodeList) => {
 
   document.addEventListener('click', (event:any) => {
     const $areaExterna:HTMLElement = document.querySelector('.tail-backgrop-menu')      
@@ -8,8 +7,7 @@ export const menuDetails = ($filtroBuscaTagsDetail:NodeList) => {
     $filtroBuscaTagsDetail.forEach(($detail:HTMLElement) => {
       const alvo:HTMLElement = event.target    
       const $itensDetailClicada:HTMLElement = alvo.parentNode.querySelector('.tail-details-itens-menu')
-      const $detailAberta:boolean = $detail.hasAttribute('open') && alvo.parentNode == $detail
-      const $inputsDetail:NodeList = $detail.querySelectorAll('input')
+      const $detailAberta:boolean = $detail.hasAttribute('open') && alvo.parentNode == $detail      
 
       if($detailAberta) {
         ocultaBackdropMenu()
@@ -81,13 +79,7 @@ export const menuDetails = ($filtroBuscaTagsDetail:NodeList) => {
   const removeBackgroundScroll = () => (document.documentElement.style.overflow = "hidden");
 
   const addBackgroundScroll = () => (document.documentElement.style.overflow = "inherit");
-
-  const recarregarPaginaSelecionarInput = ($inputsDetail:NodeList) => {
-    $inputsDetail.forEach(($input:HTMLInputElement) => {
-      $input.addEventListener('click', () => {
-        window.location.reload()
-      })
-    })
-  }
 }
+
+export { menuDetails }
 

@@ -1,4 +1,4 @@
-export const menuDetails = ($filtroBuscaTagsDetail) => {
+const menuDetails = ($filtroBuscaTagsDetail) => {
     document.addEventListener('click', (event) => {
         const $areaExterna = document.querySelector('.tail-backgrop-menu');
         const $btnFecharResponsivo = document.querySelector('.btn-fechar-details');
@@ -6,7 +6,6 @@ export const menuDetails = ($filtroBuscaTagsDetail) => {
             const alvo = event.target;
             const $itensDetailClicada = alvo.parentNode.querySelector('.tail-details-itens-menu');
             const $detailAberta = $detail.hasAttribute('open') && alvo.parentNode == $detail;
-            const $inputsDetail = $detail.querySelectorAll('input');
             if ($detailAberta) {
                 ocultaBackdropMenu();
             }
@@ -63,12 +62,6 @@ export const menuDetails = ($filtroBuscaTagsDetail) => {
     };
     const removeBackgroundScroll = () => (document.documentElement.style.overflow = "hidden");
     const addBackgroundScroll = () => (document.documentElement.style.overflow = "inherit");
-    const recarregarPaginaSelecionarInput = ($inputsDetail) => {
-        $inputsDetail.forEach(($input) => {
-            $input.addEventListener('click', () => {
-                window.location.reload();
-            });
-        });
-    };
 };
+export { menuDetails };
 //# sourceMappingURL=menu-details.js.map
