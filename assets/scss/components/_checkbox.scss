@@ -10,7 +10,7 @@
       &:after{display:block;}            
     }   
     
-    &:checked ~ .tail-details-text{color:black;}
+    &:checked ~ .tail-details-text{color:black; font-weight: 600;}
   }
   
   .tail-details-checkbox{
