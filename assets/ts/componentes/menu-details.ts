@@ -2,7 +2,7 @@ const menuDetails = ($filtroBuscaTagsDetail:NodeList) => {
 
   document.addEventListener('click', (event:any) => {
     const $areaExterna:HTMLElement = document.querySelector('.tail-backgrop-menu')      
-    const $btnFecharResponsivo:HTMLElement = document.querySelector('.btn-fechar-details')
+    const $btnFecharResponsivo:HTMLElement = document.querySelector('.tail-details-btn-fechar')
 
     $filtroBuscaTagsDetail.forEach(($detail:HTMLElement) => {
       const alvo:HTMLElement = event.target    
@@ -17,17 +17,18 @@ const menuDetails = ($filtroBuscaTagsDetail:NodeList) => {
       fecharDemaisDetails(alvo, $detail)
       fecharSeClicouFora(alvo, $areaExterna)
       resetarAnimacaoMenuDetails($itensDetailClicada)
-      fecharSeClicouBtnRespons(alvo, $btnFecharResponsivo)
-      // recarregarPaginaSelecionarInput($inputsDetail)      
+      fecharSeClicouBtnRespons(alvo, $btnFecharResponsivo)       
     })
   })
 
   // funções
   const fecharDemaisDetails = (alvo:HTMLElement, $detail:HTMLElement) => {  
     if(alvo.parentNode == $detail) {
-      $filtroBuscaTagsDetail.forEach(($detailAtual:HTMLElement) => {
-        if ($detailAtual !== alvo.parentNode) {
-          $detailAtual.removeAttribute('open')        
+      $filtroBuscaTagsDetail.forEach(($tagDetail:HTMLElement) => {
+        const $detailAtual = $tagDetail == alvo.parentNode
+
+        if (! $detailAtual) {
+          $tagDetail.removeAttribute('open')        
         }           
       })      
     }   
