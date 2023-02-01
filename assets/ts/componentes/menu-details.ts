@@ -9,7 +9,7 @@ const menuDetails = ($filtroBuscaTagsDetail:NodeList) => {
       const $itensDetailClicada:HTMLElement = alvo.parentNode.querySelector('.tail-details-itens-menu')
       const $detailAberta:boolean = $detail.hasAttribute('open') && alvo.parentNode == $detail      
       
-      exibeBackdropMenu(alvo, $detail)   
+      exibeBackdropMenu(alvo, $detail, $areaExterna)   
       fecharDemaisDetails(alvo, $detail)
       fecharSeClicouFora(alvo, $areaExterna)
       resetarAnimacaoMenuDetails($itensDetailClicada)
@@ -62,11 +62,9 @@ const menuDetails = ($filtroBuscaTagsDetail:NodeList) => {
     }
   }
 
-  const exibeBackdropMenu = (alvo:HTMLElement, $detail:HTMLElement) => {
-    const $backdrop:HTMLElement = document.querySelector('.tail-backdrop-menu')
-    
+  const exibeBackdropMenu = (alvo:HTMLElement, $detail:HTMLElement, $areaExterna:HTMLElement) => {       
     if (alvo.parentNode == $detail) {
-      $backdrop.classList.remove('hidden')
+      $areaExterna.classList.remove('hidden')
       removeBackgroundScroll()
     }
   }
