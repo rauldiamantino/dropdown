@@ -1,6 +1,6 @@
 # Dropdown horizontal com CSS
 
-O objetivo deste projeto é treinar a criação de soluções, utilizando a menor quantidade possível de código JavaScript.
+Menu horizontal com animações em Animation CSS, e armazenamento da escolha do usuário no localStorage.
 
 <details open>
   <summary>
