@@ -1,4 +1,4 @@
-# Dropdown horizontal com CSS
+# Dropdown horizontal
 
 Menu horizontal com animações CSS, e armazenamento da escolha do usuário no localStorage. <a href="https://rauldiamantino.github.io/dropdown/">Acessar projeto</a>
 
